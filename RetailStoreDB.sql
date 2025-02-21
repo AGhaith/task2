@@ -71,6 +71,10 @@ SELECT TOP 3
 FROM Products
 ORDER BY Price DESC;
 
+SELECT *, Customers.FirstName, Customers.LastName
+FROM Orders
+	LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
 DROP TABLE Customers;
 DROP TABLE Products;
 DROP TABLE Orders;
